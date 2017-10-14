@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,21 +26,47 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sW-KQ-Hl8">
+                                <rect key="frame" x="157" y="44" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.98803406949999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Ufk-Aw-a9j"/>
+                                    <constraint firstAttribute="width" secondItem="7sW-KQ-Hl8" secondAttribute="height" multiplier="1:1" id="rQw-yF-PJT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P9-WM-uAV">
+                                <rect key="frame" x="147" y="543" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="aGt-pL-26W"/>
+                                    <constraint firstAttribute="width" secondItem="8P9-WM-uAV" secondAttribute="height" multiplier="1:1" id="jYk-S5-u9N"/>
+                                </constraints>
+                                <state key="normal" title="かしゃっ"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbg-sD-NmU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rv3-Oc-kcR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0kb-AN-qd0"/>
                             <constraint firstAttribute="trailing" secondItem="rv3-Oc-kcR" secondAttribute="trailing" id="GrX-cN-RIL"/>
+                            <constraint firstItem="7sW-KQ-Hl8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RiP-Dh-SQH"/>
+                            <constraint firstItem="8P9-WM-uAV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yjw-jU-oJv"/>
+                            <constraint firstItem="7sW-KQ-Hl8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="Z7g-uK-yC9"/>
                             <constraint firstItem="rv3-Oc-kcR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g2w-Mv-Y8c"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rv3-Oc-kcR" secondAttribute="bottom" id="mBu-NY-Sa6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8P9-WM-uAV" secondAttribute="bottom" constant="44" id="vhG-5l-BTj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="previewView" destination="rv3-Oc-kcR" id="DDH-8X-3DX"/>
+                        <outlet property="takedPicturePreview" destination="7sW-KQ-Hl8" id="R2E-h2-wy1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="114.69265367316342"/>
         </scene>
     </scenes>
 </document>

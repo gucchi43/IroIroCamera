@@ -1,0 +1,6 @@
+framework module Pods_IroIroCameraTests {
+  umbrella header "Pods-IroIroCameraTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

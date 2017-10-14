@@ -14,6 +14,10 @@
 		03227C291F19401D004FFE22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03227C271F19401D004FFE22 /* LaunchScreen.storyboard */; };
 		03227C341F19401D004FFE22 /* IroIroCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03227C331F19401D004FFE22 /* IroIroCameraTests.swift */; };
 		03227C3F1F19401D004FFE22 /* IroIroCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03227C3E1F19401D004FFE22 /* IroIroCameraUITests.swift */; };
+		038AFFD91F91368400362BF1 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038AFFD81F91368300362BF1 /* Hero.framework */; };
+		304CDABADF99C28E941110ED /* Pods_IroIroCameraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC56F90D683EFA39BC11ED44 /* Pods_IroIroCameraUITests.framework */; };
+		6F5ECA4E183D5F30BB14921B /* Pods_IroIroCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0207DB9C8EB301BB9EC01925 /* Pods_IroIroCamera.framework */; };
+		F309D821386CCF43434615F1 /* Pods_IroIroCameraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0CA5487FCCF8AF4A1A2E83 /* Pods_IroIroCameraTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0207DB9C8EB301BB9EC01925 /* Pods_IroIroCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IroIroCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02E2D8480BC5259082614A9D /* Pods-IroIroCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IroIroCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IroIroCamera/Pods-IroIroCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		03227C1B1F19401D004FFE22 /* IroIroCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IroIroCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03227C1E1F19401D004FFE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03227C201F19401D004FFE22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 		03227C3A1F19401D004FFE22 /* IroIroCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IroIroCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03227C3E1F19401D004FFE22 /* IroIroCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IroIroCameraUITests.swift; sourceTree = "<group>"; };
 		03227C401F19401D004FFE22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		038AFFD81F91368300362BF1 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
+		2607B283EBBC9C5CA63F7B6E /* Pods-IroIroCameraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IroIroCameraUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IroIroCameraUITests/Pods-IroIroCameraUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A790175C8622FD008B05F66D /* Pods-IroIroCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IroIroCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-IroIroCamera/Pods-IroIroCamera.release.xcconfig"; sourceTree = "<group>"; };
+		BF0140E2735BC20C59608D53 /* Pods-IroIroCameraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IroIroCameraTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IroIroCameraTests/Pods-IroIroCameraTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD0028A27F7F4E0BB03886D6 /* Pods-IroIroCameraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IroIroCameraUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IroIroCameraUITests/Pods-IroIroCameraUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE0CA5487FCCF8AF4A1A2E83 /* Pods_IroIroCameraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IroIroCameraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD2D374A16EB7FC038BCC55 /* Pods-IroIroCameraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IroIroCameraTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IroIroCameraTests/Pods-IroIroCameraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC56F90D683EFA39BC11ED44 /* Pods_IroIroCameraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IroIroCameraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038AFFD91F91368400362BF1 /* Hero.framework in Frameworks */,
+				6F5ECA4E183D5F30BB14921B /* Pods_IroIroCamera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F309D821386CCF43434615F1 /* Pods_IroIroCameraTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304CDABADF99C28E941110ED /* Pods_IroIroCameraUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +99,8 @@
 				03227C321F19401D004FFE22 /* IroIroCameraTests */,
 				03227C3D1F19401D004FFE22 /* IroIroCameraUITests */,
 				03227C1C1F19401D004FFE22 /* Products */,
+				E7EDD92C74DCA02B2465D3BA /* Frameworks */,
+				43FA72C106F13046A38324E4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +145,30 @@
 			path = IroIroCameraUITests;
 			sourceTree = "<group>";
 		};
+		43FA72C106F13046A38324E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02E2D8480BC5259082614A9D /* Pods-IroIroCamera.debug.xcconfig */,
+				A790175C8622FD008B05F66D /* Pods-IroIroCamera.release.xcconfig */,
+				EFD2D374A16EB7FC038BCC55 /* Pods-IroIroCameraTests.debug.xcconfig */,
+				BF0140E2735BC20C59608D53 /* Pods-IroIroCameraTests.release.xcconfig */,
+				DD0028A27F7F4E0BB03886D6 /* Pods-IroIroCameraUITests.debug.xcconfig */,
+				2607B283EBBC9C5CA63F7B6E /* Pods-IroIroCameraUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E7EDD92C74DCA02B2465D3BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				038AFFD81F91368300362BF1 /* Hero.framework */,
+				0207DB9C8EB301BB9EC01925 /* Pods_IroIroCamera.framework */,
+				DE0CA5487FCCF8AF4A1A2E83 /* Pods_IroIroCameraTests.framework */,
+				FC56F90D683EFA39BC11ED44 /* Pods_IroIroCameraUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +176,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03227C431F19401D004FFE22 /* Build configuration list for PBXNativeTarget "IroIroCamera" */;
 			buildPhases = (
+				AA98455D857DFB954D3DB231 /* [CP] Check Pods Manifest.lock */,
 				03227C171F19401D004FFE22 /* Sources */,
 				03227C181F19401D004FFE22 /* Frameworks */,
 				03227C191F19401D004FFE22 /* Resources */,
+				038AFFDA1F9136B800362BF1 /* ShellScript */,
+				730973183B1199A71FA1DD6E /* [CP] Embed Pods Frameworks */,
+				39F0666C49A4F4B6C94219D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03227C461F19401D004FFE22 /* Build configuration list for PBXNativeTarget "IroIroCameraTests" */;
 			buildPhases = (
+				3571CBC6BD224431C48837B3 /* [CP] Check Pods Manifest.lock */,
 				03227C2B1F19401D004FFE22 /* Sources */,
 				03227C2C1F19401D004FFE22 /* Frameworks */,
 				03227C2D1F19401D004FFE22 /* Resources */,
+				FEC3D83A9A91299E2A0DD665 /* [CP] Embed Pods Frameworks */,
+				C388215E6F7089DCC4D721EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03227C491F19401D004FFE22 /* Build configuration list for PBXNativeTarget "IroIroCameraUITests" */;
 			buildPhases = (
+				26B5EA7B2F0F2A1782E9B4DF /* [CP] Check Pods Manifest.lock */,
 				03227C361F19401D004FFE22 /* Sources */,
 				03227C371F19401D004FFE22 /* Frameworks */,
 				03227C381F19401D004FFE22 /* Resources */,
+				4D6ACFB17EE9A93120C4D346 /* [CP] Embed Pods Frameworks */,
+				32B83A60A0835D66DE77E0A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,23 +242,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Hiroki Taniguchi";
 				TargetAttributes = {
 					03227C1A1F19401D004FFE22 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 48KBV2T232;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					03227C2E1F19401D004FFE22 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 84ZS9U8SU6;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 03227C1A1F19401D004FFE22;
 					};
 					03227C391F19401D004FFE22 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 84ZS9U8SU6;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 03227C1A1F19401D004FFE22;
 					};
@@ -256,6 +313,170 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		038AFFDA1F9136B800362BF1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Hero.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		26B5EA7B2F0F2A1782E9B4DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IroIroCameraUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32B83A60A0835D66DE77E0A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IroIroCameraUITests/Pods-IroIroCameraUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3571CBC6BD224431C48837B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IroIroCameraTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39F0666C49A4F4B6C94219D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IroIroCamera/Pods-IroIroCamera-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D6ACFB17EE9A93120C4D346 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IroIroCameraUITests/Pods-IroIroCameraUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		730973183B1199A71FA1DD6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IroIroCamera/Pods-IroIroCamera-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IroIroCamera/Pods-IroIroCamera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA98455D857DFB954D3DB231 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IroIroCamera-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C388215E6F7089DCC4D721EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IroIroCameraTests/Pods-IroIroCameraTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEC3D83A9A91299E2A0DD665 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IroIroCameraTests/Pods-IroIroCameraTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03227C171F19401D004FFE22 /* Sources */ = {
@@ -328,7 +549,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -336,7 +559,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -379,7 +606,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -387,7 +616,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -415,34 +648,47 @@
 		};
 		03227C441F19401D004FFE22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E2D8480BC5259082614A9D /* Pods-IroIroCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 48KBV2T232;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = IroIroCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bocchi.IroIroCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		03227C451F19401D004FFE22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A790175C8622FD008B05F66D /* Pods-IroIroCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 48KBV2T232;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = IroIroCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bocchi.IroIroCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		03227C471F19401D004FFE22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFD2D374A16EB7FC038BCC55 /* Pods-IroIroCameraTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -451,13 +697,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bocchi.IroIroCameraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IroIroCamera.app/IroIroCamera";
 			};
 			name = Debug;
 		};
 		03227C481F19401D004FFE22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF0140E2735BC20C59608D53 /* Pods-IroIroCameraTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,13 +714,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bocchi.IroIroCameraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IroIroCamera.app/IroIroCamera";
 			};
 			name = Release;
 		};
 		03227C4A1F19401D004FFE22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0028A27F7F4E0BB03886D6 /* Pods-IroIroCameraUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 84ZS9U8SU6;
@@ -480,13 +730,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bocchi.IroIroCameraUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = IroIroCamera;
 			};
 			name = Debug;
 		};
 		03227C4B1F19401D004FFE22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2607B283EBBC9C5CA63F7B6E /* Pods-IroIroCameraUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 84ZS9U8SU6;
@@ -494,7 +746,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bocchi.IroIroCameraUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = IroIroCamera;
 			};
 			name = Release;

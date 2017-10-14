@@ -9,42 +9,50 @@
 import UIKit
 import AVFoundation
 import CoreImage
+import StoreKit
+import Spring
+
 
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     @IBOutlet weak var previewView: UIView!
+    @IBOutlet weak var takedPicturePreview: UIButton!
     
     let captureSession = AVCaptureSession()
     var videoLayer: AVCaptureVideoPreviewLayer?
-    
     var videoOutput = AVCaptureVideoDataOutput()
     var markFirstView: UIView!
     var markSecondView: UIView!
+    var outputImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.makeMarksView()
+        self.setCameraView()
         
+    }
+    
+    func setCameraView() {
         // 入力（背景カメラ）
-        let videoDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-        let videoInput = try! AVCaptureDeviceInput.init(device: videoDevice)
+        let videoDevice = AVCaptureDevice.default(for: AVMediaType.video)
+        let videoInput = try! AVCaptureDeviceInput.init(device: videoDevice!)
         captureSession.addInput(videoInput)
         
         // 出力 (メタデータ)
-//        let metadataOutput = AVCaptureMetadataOutput()
-//        captureSession.addOutput(metadataOutput)
+        //        let metadataOutput = AVCaptureMetadataOutput()
+        //        captureSession.addOutput(metadataOutput)
         
         // QRコードを検出した際のデリゲート設定
-//        metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-//        metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
+        //        metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+        //        metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
         
-//        videoLayer = AVCaptureVideoPreviewLayer.init(session: captureSession)
-//        videoLayer?.frame = previewView.bounds
-//        videoLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-//        previewView.layer.addSublayer(videoLayer!)
+        //        videoLayer = AVCaptureVideoPreviewLayer.init(session: captureSession)
+        //        videoLayer?.frame = previewView.bounds
+        //        videoLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+        //        previewView.layer.addSublayer(videoLayer!)
         
-        videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable : Int(kCVPixelFormatType_32BGRA)]
+        videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable as! String : Int(kCVPixelFormatType_32BGRA)]
         
         //フレーム毎に呼び出すデリゲート登録
         //let queue:DispatchQueue = DispatchQueue(label:"myqueue",attribite: DISPATCH_QUEUE_SERIAL)
@@ -55,10 +63,10 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         captureSession.addOutput(self.videoOutput)
         
         let videoLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        videoLayer?.frame = self.view.bounds
-        videoLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+        videoLayer.frame = self.view.bounds
+        videoLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
-        previewView.layer.addSublayer(videoLayer!)
+        previewView.layer.addSublayer(videoLayer)
         
         //カメラ向き
         for connection in self.videoOutput.connections {
@@ -71,11 +79,11 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         
         self.captureSession.startRunning()
         
-//        // セッションの開始
-//        DispatchQueue.global(qos: .userInitiated).async {
-//            
-//            self.captureSession.startRunning()
-//        }
+        //        // セッションの開始
+        //        DispatchQueue.global(qos: .userInitiated).async {
+        //
+        //            self.captureSession.startRunning()
+        //        }
     }
     
     func makeMarksView () {
@@ -108,12 +116,14 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         return resultImage
     }
     
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)
+    {
         //同期処理（非同期処理ではキューが溜まりすぎて画面がついていかない）
         DispatchQueue.main.sync(execute: {
             
             //バッファーをUIImageに変換
             let image = self.imageFromSampleBuffer(sampleBuffer: sampleBuffer)
+            self.outputImage = self.imageFromSampleBuffer(sampleBuffer: sampleBuffer)
             let ciimage:CIImage! = CIImage(image: image)
             
             let qrDctector : CIDetector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options:[CIDetectorAccuracy: CIDetectorAccuracyHigh] )!
@@ -179,15 +189,16 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
                     markFirstView.frame = firstRect
                 }else {
                     markFirstView.layer.borderColor = UIColor.purple.cgColor
+                    markFirstView.layer.borderWidth = 10.0
                     markFirstView.frame = firstRect
                 }
             }
         })
     }
     
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+    func metadataOutput(captureOutput: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         for metadata in metadataObjects as! [AVMetadataMachineReadableCodeObject] {
-            if metadata.type == AVMetadataObjectTypeQRCode {
+            if metadata.type == AVMetadataObject.ObjectType.qr {
                 // 検出位置を取得
                 let barCode = videoLayer?.transformedMetadataObject(for: metadata) as! AVMetadataMachineReadableCodeObject
                 markFirstView!.frame = barCode.bounds
@@ -196,10 +207,47 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
 //                    showQrLinkAlert(qrLink: qrUrl)
                     makeQrCode(url: qrUrl)
                 }
-            } else if metadata.type == AVMetadataObjectTypeFace {
+            } else if metadata.type == AVMetadataObject.ObjectType.face {
                 print("顔認識できた")
             }
         }
+    }
+    
+    @IBAction func takePicture(_ sender: Any) {
+        print("tap takePicture!!")
+
+        
+        takeStillPicture()
+    }
+    
+    func takeStillPicture(){
+        if var _:AVCaptureConnection = videoOutput.connection(with: AVMediaType.video){
+            
+            //顔認証のmarkFirstImageを追加する
+            UIGraphicsBeginImageContextWithOptions(previewView.frame.size, false, 0.0)
+            
+            self.outputImage?.draw(in: previewView.frame)
+            let markFirstImage = markFirstView.toImage()
+            markFirstImage?.draw(in: markFirstView.frame)
+            
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            
+            if newImage != nil {
+                UIImageWriteToSavedPhotosAlbum(newImage!, self, nil, nil)
+                setTakedPicturePreview(takedImage: newImage!)
+            }else {
+                UIImageWriteToSavedPhotosAlbum(outputImage!, self, nil, nil)
+                setTakedPicturePreview(takedImage: outputImage!)
+            }
+            
+        }
+    }
+    
+    func setTakedPicturePreview(takedImage: UIImage) {
+//        takedPicturePreview.setImage(takedImage, for: UIControlState.normal)
+        takedPicturePreview.setBackgroundImage(takedImage, for: UIControlState.normal)
     }
     
     func showQrLinkAlert(qrLink: String) {
@@ -238,6 +286,59 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         // Dispose of any resources that can be recreated.
     }
 
+    private func showReviewAlert() {
+        if #available(iOS 10.3, *) {
+            // iOS 10.3以上の処理
+            SKStoreReviewController.requestReview()
+        } else if let url = URL(string: "itms-apps://itunes.apple.com/app/id1222454517?action=write-review") {
+            // iOS 10.3未満の処理
+            showAlertController(url: url)
+        }
 
+    }
+    
+    private func showAlertController(url: URL) {
+        let alert = UIAlertController(title: "レビューのお願い",
+                                      message: "いつもありがとうございます！\nレビューをお願いします！",
+                                      preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        
+        let cancelAction = UIAlertAction(title: "キャンセル",
+                                         style: .cancel,
+                                         handler: nil)
+        alert.addAction(cancelAction)
+        
+        let reviewAction = UIAlertAction(title: "レビューする",
+                                         style: .default,
+                                         handler: {
+                                            (action:UIAlertAction!) -> Void in
+                                            
+                                            
+                                            if #available(iOS 10.0, *) {
+                                                UIApplication.shared.open(url, options: [:])
+                                            }
+                                            else {
+                                                UIApplication.shared.openURL(url)
+                                            }
+                                            
+        })
+        alert.addAction(reviewAction)
+    }
 }
+
+
+extension UIView {
+    func toImage() -> UIImage? {
+        UIGraphicsBeginImageContext(self.frame.size)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+        self.layer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+}
+
 

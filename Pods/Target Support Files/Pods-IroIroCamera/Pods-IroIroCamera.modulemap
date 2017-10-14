@@ -1,0 +1,6 @@
+framework module Pods_IroIroCamera {
+  umbrella header "Pods-IroIroCamera-umbrella.h"
+
+  export *
+  module * { export * }
+}
